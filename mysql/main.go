@@ -23,7 +23,7 @@ var (
 func init() {
 	host = "127.0.0.1"
 	user = "root"
-	pass = ""
+	pass = "mysql"
 	port = 3306
 	database = "mysql"
 	dryRun = flag.Bool("dry_run", true, "usesage of dry run")
