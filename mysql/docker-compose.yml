@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  # MySQL
+  db:
+    image: mysql:8
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      BIND-ADDRESS: 0.0.0.0
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+    - 3306:3306
