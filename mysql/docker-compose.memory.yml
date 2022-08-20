@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  # MySQL
+  db:
+    container_name: mysql_server_memory
+    volumes:
+      - /dev/shm/data:/var/lib/mysql
