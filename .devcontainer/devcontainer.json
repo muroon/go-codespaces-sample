@@ -1,0 +1,14 @@
+{
+	"name": "Development Environment",
+	"runArgs": ["--init", "--privileged", "--shm-size=1g"],
+	"mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
+	"overrideCommand": false,
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "8gb",
+		"storage": "32gb" 
+	},
+	"features": {
+		"sshd": "latest"
+	}
+}
